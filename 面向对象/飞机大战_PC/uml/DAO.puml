@@ -1,0 +1,31 @@
+@startuml
+class edu.hitsz.dao.PlayerDAOImpl {
+- {static} List<Player> playerList
++ void getPlayerList()
++ void addPlayer(String,int)
++ void deletePlayer(int)
++ void savePlayerList()
++ void printPlayerList()
+}
+interface edu.hitsz.dao.PlayerDAO {
+~ void getPlayerList()
+~ void addPlayer(String,int)
+~ void deletePlayer(int)
+~ void printPlayerList()
+~ void savePlayerList()
+}
+class edu.hitsz.dao.Player {
+- int playerID
+- String playerName
+- int score
+- LocalDateTime dateTime
++ int getScore()
++ String getPlayerName()
++ String getDateTime()
+}
+
+
+edu.hitsz.dao.PlayerDAO <|.. edu.hitsz.dao.PlayerDAOImpl
+edu.hitsz.dao.PlayerDAOImpl --> edu.hitsz.dao.Player
+edu.hitsz.application.Game ..>  edu.hitsz.dao.PlayerDAO
+@enduml

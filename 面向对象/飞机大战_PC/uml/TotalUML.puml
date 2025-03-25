@@ -1,0 +1,163 @@
+@startuml
+class edu.hitsz.bullet.BaseBullet {
+- int power
++ EnemyInstance trans()
++ void forward()
++ int getPower()
+}
+class edu.hitsz.factory.BossEnemyFactory {
++ AbstractAircraft createEnemy(int,int,int,int,int)
+}
+class edu.hitsz.factory.BombSupplyItemFactory {
++ AbstractItem createItem(int,int,int,int)
+}
+class edu.hitsz.bullet.EnemyBullet {
++ void info()
++ void update()
++ EnemyInstance trans()
+}
+abstract class edu.hitsz.basic.AbstractFlyingObject {
+# int locationX
+# int locationY
+# int speedX
+# int speedY
+# BufferedImage image
+# int width
+# int height
+# boolean isValid
++ void forward()
++ boolean crash(AbstractFlyingObject)
++ int getLocationX()
++ int getLocationY()
++ void setLocation(double,double)
++ int getSpeedY()
++ BufferedImage getImage()
++ int getWidth()
++ int getHeight()
++ boolean notValid()
++ void vanish()
+}
+class edu.hitsz.aircraft.HeroAircraft {
+- {static} HeroAircraft hero
++ Context fireObj
++ EnemyInstance trans()
++ {static} HeroAircraft getInstance()
++ void setStrategy(Strategy)
++ void setStatus(int,int,int,int,int)
++ List<BaseBullet> shoot()
++ void forward()
++ AbstractItem dropItem(AbstractItemFactory)
++ void increaseHp(int)
+}
+interface edu.hitsz.basic.EnemyInstance {
+~ void update()
+~ EnemyInstance trans()
+~ void info()
+}
+abstract class edu.hitsz.item.AbstractItem {
++ {abstract}void itemFunction()
+}
+class edu.hitsz.item.HealingItem {
+- int healHp
++ void itemFunction()
++ void forward()
+}
+abstract class edu.hitsz.factory.AbstractItemFactory {
++ {abstract}AbstractItem createItem(int,int,int,int)
+}
+abstract class edu.hitsz.aircraft.AbstractAircraft {
+# int maxHp
+# int hp
++ boolean bossFlag
++ boolean eliteFlag
++ {abstract}EnemyInstance trans()
++ void decreaseHp(int)
++ int getHp()
++ {abstract}List<BaseBullet> shoot()
++ {abstract}AbstractItem dropItem(AbstractItemFactory)
+}
+abstract class edu.hitsz.factory.AbstractEnemyFactory {
++ {abstract}AbstractAircraft createEnemy(int,int,int,int,int)
+}
+class edu.hitsz.item.FireSupplyItem {
++ void itemFunction()
++ void forward()
+}
+class edu.hitsz.bullet.HeroBullet {
+}
+class edu.hitsz.aircraft.EliteEnemy {
++ Context fireObj
++ void update()
++ void info()
++ EnemyInstance trans()
++ void forward()
++ List<BaseBullet> shoot()
++ AbstractItem dropItem(AbstractItemFactory)
+}
+class edu.hitsz.item.BombSupplyItem {
+~ List<EnemyInstance> enemyList
++ void addEnemyInstance(EnemyInstance)
++ void removeEnemyInstance(EnemyInstance)
++ void updateAll()
++ void itemFunction()
++ void forward()
+}
+class edu.hitsz.factory.MobEnemyFactory {
++ AbstractAircraft createEnemy(int,int,int,int,int)
+}
+class edu.hitsz.aircraft.MobEnemy {
++ void info()
++ EnemyInstance trans()
++ void update()
++ void forward()
++ List<BaseBullet> shoot()
++ AbstractItem dropItem(AbstractItemFactory)
+}
+class edu.hitsz.aircraft.BossEnemy {
+- Context fireObj
++ EnemyInstance trans()
++ void forward()
++ List<BaseBullet> shoot()
++ AbstractItem dropItem(AbstractItemFactory)
+}
+class edu.hitsz.factory.FireSupplyItemFactory {
++ AbstractItem createItem(int,int,int,int)
+}
+class edu.hitsz.factory.EliteEnemyFactory {
++ AbstractAircraft createEnemy(int,int,int,int,int)
+}
+class edu.hitsz.factory.HealingItemFactory {
++ AbstractItem createItem(int,int,int,int)
+}
+
+
+edu.hitsz.basic.AbstractFlyingObject <|-- edu.hitsz.bullet.BaseBullet
+edu.hitsz.factory.AbstractEnemyFactory <|-- edu.hitsz.factory.BossEnemyFactory
+edu.hitsz.factory.AbstractItemFactory <|-- edu.hitsz.factory.BombSupplyItemFactory
+edu.hitsz.basic.EnemyInstance <|.. edu.hitsz.bullet.EnemyBullet
+edu.hitsz.bullet.BaseBullet <|-- edu.hitsz.bullet.EnemyBullet
+edu.hitsz.aircraft.AbstractAircraft <|-- edu.hitsz.aircraft.HeroAircraft
+edu.hitsz.basic.AbstractFlyingObject <|-- edu.hitsz.item.AbstractItem
+edu.hitsz.item.AbstractItem <|-- edu.hitsz.item.HealingItem
+edu.hitsz.basic.AbstractFlyingObject <|-- edu.hitsz.aircraft.AbstractAircraft
+edu.hitsz.item.AbstractItem <|-- edu.hitsz.item.FireSupplyItem
+edu.hitsz.bullet.BaseBullet <|-- edu.hitsz.bullet.HeroBullet
+edu.hitsz.basic.EnemyInstance <|.. edu.hitsz.aircraft.EliteEnemy
+edu.hitsz.aircraft.AbstractAircraft <|-- edu.hitsz.aircraft.EliteEnemy
+edu.hitsz.item.AbstractItem <|-- edu.hitsz.item.BombSupplyItem
+edu.hitsz.factory.AbstractEnemyFactory <|-- edu.hitsz.factory.MobEnemyFactory
+edu.hitsz.basic.EnemyInstance <|.. edu.hitsz.aircraft.MobEnemy
+edu.hitsz.aircraft.AbstractAircraft <|-- edu.hitsz.aircraft.MobEnemy
+edu.hitsz.aircraft.AbstractAircraft <|-- edu.hitsz.aircraft.BossEnemy
+edu.hitsz.factory.AbstractItemFactory <|-- edu.hitsz.factory.FireSupplyItemFactory
+edu.hitsz.factory.AbstractEnemyFactory <|-- edu.hitsz.factory.EliteEnemyFactory
+edu.hitsz.factory.AbstractItemFactory <|-- edu.hitsz.factory.HealingItemFactory
+
+edu.hitsz.factory.HealingItemFactory .> edu.hitsz.item.HealingItemHealingItem
+edu.hitsz.factory.FireSupplyItemFactoryFireSupplyItemFactory .> edu.hitsz.item.FireSupplyItemFireSupplyItem
+edu.hitsz.factory.BombSupplyItemFactoryBombSupplyItemFactory .> edu.hitsz.item.BombSupplyItemBombSupplyItem
+
+edu.hitsz.factory.BossEnemyFactoryBossEnemyFactory .> edu.hitsz.aircraft.BossEnemyBossEnemy
+edu.hitsz.factory.EliteEnemyFactoryEliteEnemyFactory .> edu.hitsz.aircraft.EliteEnemy
+edu.hitsz.factory.MobEnemyFactoryMobEnemyFactory .> edu.hitsz.aircraft.MobEnemy
+@enduml

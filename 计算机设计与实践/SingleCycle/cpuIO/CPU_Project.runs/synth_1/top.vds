@@ -1,0 +1,612 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jul 12 10:18:47 2022
+# Process ID: 10464
+# Current directory: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/top.vds
+# Journal file: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2244 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 467.926 ; gain = 100.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-10464-507-31/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (1#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-10464-507-31/realtime/cpuclk_stub.v:5]
+WARNING: [Synth 8-350] instance 'CPUCLK' of module 'cpuclk' requires 3 connections, but only 2 given [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:44]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/pc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (2#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'npc' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/npc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'npc' (3#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/npc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sext' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/sext.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sext' (4#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/sext.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/mux.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/mux.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (5#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rf' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:1]
+WARNING: [Synth 8-5788] Register regs_reg[31] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[30] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[29] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[28] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[27] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[26] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[25] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[24] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[23] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[22] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[21] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[20] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[19] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[18] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[17] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[16] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[15] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[14] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[13] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[12] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[11] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[10] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[9] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[8] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[7] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[6] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[5] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[4] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[3] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[2] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[1] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+WARNING: [Synth 8-5788] Register regs_reg[0] in module rf is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'rf' (6#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (7#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control' (8#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/control.v:1]
+WARNING: [Synth 8-3848] Net led in module/entity cpu does not have driver. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:8]
+WARNING: [Synth 8-3848] Net content in module/entity cpu does not have driver. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (9#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'prgrom' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-10464-507-31/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prgrom' (10#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-10464-507-31/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dram' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-10464-507-31/realtime/dram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dram' (11#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-10464-507-31/realtime/dram_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'iosel' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:1]
+WARNING: [Synth 8-5788] Register led_wen_reg in module iosel is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:39]
+WARNING: [Synth 8-5788] Register display_wen_reg in module iosel is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'iosel' (12#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:1]
+INFO: [Synth 8-6157] synthesizing module 'led' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'led' (13#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v:1]
+INFO: [Synth 8-6157] synthesizing module 'divider' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'divider' (14#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:2]
+INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'display' (15#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (16#1) [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:1]
+WARNING: [Synth 8-3331] design control has unconnected port inst[31]
+WARNING: [Synth 8-3331] design control has unconnected port inst[29]
+WARNING: [Synth 8-3331] design control has unconnected port inst[28]
+WARNING: [Synth 8-3331] design control has unconnected port inst[27]
+WARNING: [Synth 8-3331] design control has unconnected port inst[26]
+WARNING: [Synth 8-3331] design control has unconnected port inst[25]
+WARNING: [Synth 8-3331] design control has unconnected port inst[24]
+WARNING: [Synth 8-3331] design control has unconnected port inst[23]
+WARNING: [Synth 8-3331] design control has unconnected port inst[22]
+WARNING: [Synth 8-3331] design control has unconnected port inst[21]
+WARNING: [Synth 8-3331] design control has unconnected port inst[20]
+WARNING: [Synth 8-3331] design control has unconnected port inst[19]
+WARNING: [Synth 8-3331] design control has unconnected port inst[18]
+WARNING: [Synth 8-3331] design control has unconnected port inst[17]
+WARNING: [Synth 8-3331] design control has unconnected port inst[16]
+WARNING: [Synth 8-3331] design control has unconnected port inst[15]
+WARNING: [Synth 8-3331] design control has unconnected port inst[11]
+WARNING: [Synth 8-3331] design control has unconnected port inst[10]
+WARNING: [Synth 8-3331] design control has unconnected port inst[9]
+WARNING: [Synth 8-3331] design control has unconnected port inst[8]
+WARNING: [Synth 8-3331] design control has unconnected port inst[7]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[23]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[22]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[21]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[20]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[17]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[16]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[15]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[14]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[13]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[12]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[11]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[10]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[9]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[8]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[7]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[6]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[5]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[4]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[3]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[2]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[1]
+WARNING: [Synth 8-3331] design cpu has unconnected port led[0]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[31]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[30]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[29]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[28]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[27]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[26]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[25]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[24]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[23]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[22]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[21]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[20]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[17]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[16]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[15]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[14]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[13]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[12]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[11]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[10]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[9]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[8]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[7]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[6]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[5]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[4]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[3]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[2]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[1]
+WARNING: [Synth 8-3331] design cpu has unconnected port content[0]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[23]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[22]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[21]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[20]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[17]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[16]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[15]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[14]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[13]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[12]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[11]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[10]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[9]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[8]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[7]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[6]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[5]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[4]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[3]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[2]
+WARNING: [Synth 8-3331] design cpu has unconnected port sw[1]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 525.859 ; gain = 158.504
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 525.859 ; gain = 158.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 525.859 ; gain = 158.504
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram/dram_in_context.xdc] for cell 'DM'
+Finished Parsing XDC File [c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram/dram_in_context.xdc] for cell 'DM'
+Parsing XDC File [c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc] for cell 'CPUCLK'
+Finished Parsing XDC File [c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc] for cell 'CPUCLK'
+Parsing XDC File [c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom/prgrom_in_context.xdc] for cell 'IM'
+Finished Parsing XDC File [c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom/prgrom_in_context.xdc] for cell 'IM'
+Parsing XDC File [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/constrs_1/new/pin.xdc]
+Finished Parsing XDC File [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/constrs_1/new/pin.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/constrs_1/new/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/dont_touch.xdc]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 894.746 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 894.746 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 894.746 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 894.746 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 894.746 ; gain = 527.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 894.746 ; gain = 527.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for DM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for CPUCLK. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for IM. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 894.746 ; gain = 527.391
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "regs_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v:17]
+INFO: [Synth 8-5545] ROM "led" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "content" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "led_wen" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "display_wen" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 894.746 ; gain = 527.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 34    
+	               24 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 38    
+	  33 Input     32 Bit        Muxes := 2     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   5 Input     17 Bit        Muxes := 1     
+	   9 Input     17 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 38    
+	   3 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module pc 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module npc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module rf 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 37    
+	  33 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 32    
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+Module control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input     17 Bit        Muxes := 1     
+	   9 Input     17 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module iosel 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 6     
+Module led 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+Module divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   8 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "led_wen" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "display_wen" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "content" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\DP/led_dp_reg )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 894.746 ; gain = 527.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'CPUCLK/clk_out1' to pin 'CPUCLK/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 894.746 ; gain = 527.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 894.746 ; gain = 527.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 946.645 ; gain = 579.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 946.645 ; gain = 579.289
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 946.645 ; gain = 579.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 946.645 ; gain = 579.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 946.645 ; gain = 579.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:08 . Memory (MB): peak = 946.645 ; gain = 579.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:08 . Memory (MB): peak = 946.645 ; gain = 579.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |cpuclk        |         1|
+|2     |prgrom        |         1|
+|3     |dram          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |cpuclk |     1|
+|2     |dram   |     1|
+|3     |prgrom |     1|
+|4     |BUFG   |     1|
+|5     |CARRY4 |    41|
+|6     |LUT1   |     6|
+|7     |LUT2   |    75|
+|8     |LUT3   |    92|
+|9     |LUT4   |   156|
+|10    |LUT5   |   872|
+|11    |LUT6   |  1185|
+|12    |MUXF7  |   287|
+|13    |FDCE   |  1081|
+|14    |FDRE   |    53|
+|15    |IBUF   |    26|
+|16    |OBUF   |    40|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------+------+
+|      |Instance |Module  |Cells |
++------+---------+--------+------+
+|1     |top      |        |  3981|
+|2     |  CPU    |cpu     |  3655|
+|3     |    ALU  |alu     |     8|
+|4     |    NPC  |npc     |    24|
+|5     |    PC   |pc      |   107|
+|6     |    RF   |rf      |  3516|
+|7     |  DP     |display |    29|
+|8     |  DSL    |iosel   |    87|
+|9     |  DVDR   |divider |    53|
+|10    |  LED    |led     |    24|
++------+---------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:08 . Memory (MB): peak = 946.645 ; gain = 579.289
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 80 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 946.645 ; gain = 210.402
+Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 946.645 ; gain = 579.289
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 328 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'rf' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 946.645 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+92 Infos, 138 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 946.645 ; gain = 590.766
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 946.645 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 12 10:20:02 2022...

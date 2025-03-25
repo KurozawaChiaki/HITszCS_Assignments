@@ -1,0 +1,602 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jul 12 09:51:55 2022
+# Process ID: 4312
+# Current directory: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7264 C:\Users\lenovo\Downloads\22_7_10_SingleCycleCPU\SingleCycle\cpuIO\CPU_Project.xpr
+# Log file: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/vivado.log
+# Journal file: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Jul 12 09:52:18 2022] Launched impl_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/Port_#0006.Hub_#0001
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1822.102 ; gain = 0.063
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/Port_#0006.Hub_#0001
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+export_ip_user_files -of_objects  [get_files C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/synthesized_ip/prgrom/prgrom.dcp] -no_script -reset -force -quiet
+remove_files  C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/synthesized_ip/prgrom/prgrom.dcp
+export_ip_user_files -of_objects  [get_files C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/synthesized_ip/dram/dram.dcp] -no_script -reset -force -quiet
+remove_files  C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/synthesized_ip/dram/dram.dcp
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name prgrom -dir c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip
+set_property -dict [list CONFIG.depth {16384} CONFIG.data_width {32} CONFIG.Component_Name {prgrom} CONFIG.memory_type {rom} CONFIG.coefficient_file {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/synthesized_ip/prgrom/inst_ram.coe}] [get_ips prgrom]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'prgrom' to 'prgrom' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/synthesized_ip/prgrom/inst_ram.coe' provided. It will be converted relative to IP Instance files '../../../../synthesized_ip/prgrom/inst_ram.coe'
+generate_target {instantiation_template} [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'prgrom'...
+generate_target all [get_files  c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'prgrom'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'prgrom'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'prgrom'...
+catch { config_ip_cache -export [get_ips -all prgrom] }
+export_ip_user_files -of_objects [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci]
+launch_runs -jobs 8 prgrom_synth_1
+[Tue Jul 12 10:00:30 2022] Launched prgrom_synth_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/prgrom_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci] -directory C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files -ipstatic_source_dir C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/modelsim} {questa=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/questa} {riviera=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name dram -dir c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip
+set_property -dict [list CONFIG.depth {16384} CONFIG.data_width {32} CONFIG.Component_Name {dram} CONFIG.coefficient_file {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/synthesized_ip/dram/data_ram.coe}] [get_ips dram]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'dram' to 'dram' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/synthesized_ip/dram/data_ram.coe' provided. It will be converted relative to IP Instance files '../../../../synthesized_ip/dram/data_ram.coe'
+generate_target {instantiation_template} [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'dram'...
+generate_target all [get_files  c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dram'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dram'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'dram'...
+catch { config_ip_cache -export [get_ips -all dram] }
+export_ip_user_files -of_objects [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci]
+launch_runs -jobs 8 dram_synth_1
+[Tue Jul 12 10:00:57 2022] Launched dram_synth_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/dram_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci] -directory C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files -ipstatic_source_dir C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/modelsim} {questa=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/questa} {riviera=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -name {xsim.simulate.runtime} -value {2s} -objects [get_filesets sim_1]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v
+update_compile_order -fileset sim_1
+set_property top testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/data_ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/dram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/inst_ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/prgrom.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iosel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/npc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module npc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rf
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/sext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sext
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2458] undeclared symbol rst, assumed default net type wire [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v:39]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 461321de36024ad785b7fc5473d0dd15 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'rst_n' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:108]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.npc
+Compiling module xil_defaultlib.sext
+Compiling module xil_defaultlib.mux
+Compiling module xil_defaultlib.rf
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.cpu
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.prgrom
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.dram
+Compiling module xil_defaultlib.iosel
+Compiling module xil_defaultlib.led
+Compiling module xil_defaultlib.divider
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Jul 12 10:02:25 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 2s
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in testbench.TOP.DM.inst at time                    0 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time              2455000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             12655000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             13105000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             13605000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             14055000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             14755000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             15155000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             15755000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             16155000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             38655000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             39005000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             39405000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             43905000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             44355000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             44855000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             45305000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             46005000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             46405000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             47005000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             47405000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             86455000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             86655000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             87005000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             87205000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             88905000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             89205000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             89505000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             89805000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             92205000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             92705000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             93255000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             93705000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             94455000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             94855000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             95455000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             95855000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             97555000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+$finish called at time : 200020 ns : File "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v" Line 34
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2s
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2100.938 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/data_ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/dram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/inst_ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim/prgrom.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 461321de36024ad785b7fc5473d0dd15 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'rst_n' [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:108]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in testbench.TOP.DM.inst at time                    0 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time              2455000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             12655000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             13105000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             13605000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             14055000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             14755000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             15155000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             15755000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             16155000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             38655000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             39005000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             39405000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             43905000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             44355000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             44855000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             45305000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             46005000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             46405000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             47005000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             47405000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             86455000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             86655000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             87005000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             87205000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             88905000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             89205000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             89505000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             89805000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             92205000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             92705000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             93255000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             93705000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             94455000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             94855000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             95455000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             95855000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+WARNING in testbench.TOP.DM.inst at time             97555000 ns: 
+Reading from out-of-range address. Max address in testbench.TOP.DM.inst is       16383
+$finish called at time : 200020 ns : File "C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v" Line 34
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2100.938 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci] -no_script -reset -force -quiet
+remove_files  -fileset prgrom c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci
+INFO: [Project 1-386] Moving file 'c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci' from fileset 'prgrom' to fileset 'sources_1'.
+file delete -force c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name prgrom -dir c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip
+set_property -dict [list CONFIG.depth {16384} CONFIG.data_width {32} CONFIG.Component_Name {prgrom} CONFIG.memory_type {rom} CONFIG.coefficient_file {C:/Users/lenovo/Downloads/calculator.coe}] [get_ips prgrom]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'prgrom' to 'prgrom' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/lenovo/Downloads/calculator.coe' provided. It will be converted relative to IP Instance files '../../../../../../../calculator.coe'
+generate_target {instantiation_template} [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'prgrom'...
+generate_target all [get_files  c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'prgrom'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'prgrom'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'prgrom'...
+catch { config_ip_cache -export [get_ips -all prgrom] }
+export_ip_user_files -of_objects [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci]
+launch_runs -jobs 8 prgrom_synth_1
+[Tue Jul 12 10:07:58 2022] Launched prgrom_synth_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/prgrom_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/prgrom/prgrom.xci] -directory C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files -ipstatic_source_dir C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/modelsim} {questa=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/questa} {riviera=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci] -no_script -reset -force -quiet
+remove_files  -fileset dram c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/dram_synth_1
+
+INFO: [Project 1-386] Moving file 'c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci' from fileset 'dram' to fileset 'sources_1'.
+file delete -force c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name dram -dir c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip
+set_property -dict [list CONFIG.depth {16384} CONFIG.data_width {32} CONFIG.Component_Name {dram}] [get_ips dram]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'dram' to 'dram' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'dram'...
+generate_target all [get_files  c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dram'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dram'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'dram'...
+catch { config_ip_cache -export [get_ips -all dram] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP dram, cache-ID = 93606e7f8b719882; cache size = 15.846 MB.
+export_ip_user_files -of_objects [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci'
+export_simulation -of_objects [get_files c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci] -directory C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files -ipstatic_source_dir C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/modelsim} {questa=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/questa} {riviera=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/riviera} {activehdl=C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci' is already up-to-date
+[Tue Jul 12 10:09:08 2022] Launched prgrom_synth_1, synth_1...
+Run output will be captured here:
+prgrom_synth_1: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/prgrom_synth_1/runme.log
+synth_1: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/runme.log
+[Tue Jul 12 10:09:08 2022] Launched impl_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/Port_#0006.Hub_#0001
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2100.938 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/dram/dram.xci' is already up-to-date
+[Tue Jul 12 10:18:46 2022] Launched synth_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/runme.log
+[Tue Jul 12 10:18:46 2022] Launched impl_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2100.938 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+add_files -norecurse C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/switch.v
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/Port_#0006.Hub_#0001
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/start.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2100.938 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/project_1/project_1.srcs/sim_1/new/testbench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/switch.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/lenovo/Downloads/22_7_10_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/calculator.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2159.004 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 12 10:34:46 2022...

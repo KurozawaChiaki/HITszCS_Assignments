@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.1 (64-bit)
+# SW Build 3557992 on Fri Jun  3 09:58:00 MDT 2022
+# IP Build 3556342 on Fri Jun  3 19:31:36 MDT 2022
+# Start of session at: Sat Jul  9 12:59:24 2022
+# Process ID: 5460
+# Current directory: E:/Documents/Code/SoC_Lab/SingleCycle/cpuIO/project_1/project_1.runs/cpuclk_synth_1
+# Command line: vivado.exe -log cpuclk.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpuclk.tcl
+# Log file: E:/Documents/Code/SoC_Lab/SingleCycle/cpuIO/project_1/project_1.runs/cpuclk_synth_1/cpuclk.vds
+# Journal file: E:/Documents/Code/SoC_Lab/SingleCycle/cpuIO/project_1/project_1.runs/cpuclk_synth_1\vivado.jou
+# Running On: AliVe, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17010 MB
+#-----------------------------------------------------------
+source cpuclk.tcl -notrace

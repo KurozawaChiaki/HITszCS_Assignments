@@ -1,0 +1,97 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Jul 10 16:06:25 2022
+# Process ID: 2092
+# Current directory: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11364 C:\Users\lenovo\Downloads\22_7_9_SingleCycleCPU\SingleCycle\cpuIO\CPU_Project.xpr
+# Log file: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/vivado.log
+# Journal file: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 849.898 ; gain = 205.039
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/led.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Sun Jul 10 16:07:34 2022] Launched synth_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Sun Jul 10 16:09:27 2022] Launched impl_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jul 10 16:11:15 2022] Launched impl_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 3252 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.916 . Memory (MB): peak = 1839.422 ; gain = 4.734
+open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1839.508 ; gain = 894.051
+INFO: [Common 17-344] 'open_run' was cancelled
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Sun Jul 10 16:13:20 2022] Launched synth_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Sun Jul 10 16:14:53 2022] Launched impl_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jul 10 16:16:54 2022] Launched impl_1...
+Run output will be captured here: C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn1" may be locked by another hw_server.
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:jsn1:3121
+ERROR: [Labtools 27-2223] Unable to connect to hw_server with URL "TCP:jsn1:3121".
+Resolution: 1. Check the host name, port number and network connectivity.
+2. Check to ensure the hw_server is running on the target.
+ERROR: [Common 17-39] 'connect_hw_server' failed due to earlier errors.
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/Port_#0006.Hub_#0001
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/lenovo/Downloads/22_7_9_SingleCycleCPU/SingleCycle/cpuIO/CPU_Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2591.605 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 10 16:20:18 2022...

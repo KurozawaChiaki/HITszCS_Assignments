@@ -1,0 +1,42 @@
+@startuml
+class edu.hitsz.application.GameHard {
+- int mobGenerationLimit
+- int eliteGenerationLimit
+- double shootPeriodRate
+- double maxNumberRate
+- double enemyGenerationRate
+- double enemyHpRate
++ void difficultyTag()
++ void generateEnemy()
++ void difficultyEvolve()
++ void readPlayerList(PlayerDAO)
+}
+abstract class edu.hitsz.application.Game {
++ {abstract}void difficultyTag()
++ {abstract}void generateEnemy()
++ {abstract}void difficultyEvolve()
++ {abstract}void readPlayerList(PlayerDAO)
+}
+class edu.hitsz.application.GameMedium {
+- double shootPeriodRate
+- double maxNumberRate
+- double enemyGenerationRate
+- double enemyHpRate
++ void difficultyTag()
++ void generateEnemy()
++ void difficultyEvolve()
++ void readPlayerList(PlayerDAO)
+}
+class edu.hitsz.application.GameEasy {
++ void difficultyTag()
++ void difficultyEvolve()
++ void generateEnemy()
++ void readPlayerList(PlayerDAO)
+}
+
+
+edu.hitsz.application.Game <|-- edu.hitsz.application.GameHard
+edu.hitsz.application.JPanel <|-- edu.hitsz.application.Game
+edu.hitsz.application.Game <|-- edu.hitsz.application.GameMedium
+edu.hitsz.application.Game <|-- edu.hitsz.application.GameEasy
+@enduml

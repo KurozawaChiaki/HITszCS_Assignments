@@ -1,0 +1,49 @@
+@startuml
+abstract class edu.hitsz.application.Game {
+}
+class edu.hitsz.item.BombSupplyItem {
+~ List<EnemyInstance> enemyList
++ void addEnemyInstance(EnemyInstance)
++ void removeEnemyInstance(EnemyInstance)
++ void updateAll()
++ void itemFunction()
++ void forward()
+}
+class edu.hitsz.aircraft.EliteEnemy {
++ Context fireObj
++ void update()
++ void info()
++ EnemyInstance trans()
++ void forward()
++ List<BaseBullet> shoot()
++ AbstractItem dropItem(AbstractItemFactory)
+}
+class edu.hitsz.aircraft.MobEnemy {
++ void info()
++ EnemyInstance trans()
++ void update()
++ void forward()
++ List<BaseBullet> shoot()
++ AbstractItem dropItem(AbstractItemFactory)
+}
+class edu.hitsz.bullet.EnemyBullet {
++ void info()
++ void update()
++ EnemyInstance trans()
+}
+interface edu.hitsz.basic.EnemyInstance {
+~ void update()
+~ EnemyInstance trans()
+~ void info()
+}
+
+
+edu.hitsz.basic.EnemyInstance <|.. edu.hitsz.aircraft.EliteEnemy
+edu.hitsz.basic.EnemyInstance <|.. edu.hitsz.aircraft.MobEnemy
+edu.hitsz.basic.EnemyInstance <|.. edu.hitsz.bullet.EnemyBullet
+edu.hitsz.application.Game -> edu.hitsz.item.BombSupplyItem
+edu.hitsz.application.Game ..> edu.hitsz.aircraft.EliteEnemy
+edu.hitsz.application.Game ..> edu.hitsz.aircraft.MobEnemy
+edu.hitsz.application.Game ..> edu.hitsz.bullet.EnemyBullet
+edu.hitsz.item.BombSupplyItem o--> edu.hitsz.basic.EnemyInstance
+@enduml

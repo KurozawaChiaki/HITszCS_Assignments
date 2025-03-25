@@ -1,0 +1,614 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5848 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 467.301 ; gain = 99.695
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-12108-507-31/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (1#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-12108-507-31/realtime/cpuclk_stub.v:5]
+WARNING: [Synth 8-350] instance 'cpuclk' of module 'cpuclk' requires 3 connections, but only 2 given [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:18]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/pc.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (2#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/pc.v:3]
+INFO: [Synth 8-6157] synthesizing module 'npc' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/npc.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/npc.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'npc' (3#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/npc.v:3]
+INFO: [Synth 8-6157] synthesizing module 'prgrom' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-12108-507-31/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prgrom' (4#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-12108-507-31/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sext' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/sext.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sext' (5#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/sext.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/mux.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/mux.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (6#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/mux.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rf' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'rf' (7#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/rf.v:3]
+WARNING: [Synth 8-350] instance 'alu_a_mux' of module 'mux' requires 6 connections, but only 4 given [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-350] instance 'alu_b_mux' of module 'mux' requires 6 connections, but only 4 given [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (8#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'comp' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/comp.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'comp' (9#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/comp.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dram' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-12108-507-31/realtime/dram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dram' (10#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.runs/synth_1/.Xil/Vivado-12108-507-31/realtime/dram_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'iosel' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:1]
+WARNING: [Synth 8-5788] Register content_reg in module iosel is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'iosel' (11#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/iosel.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/control.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'control' (12#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/control.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (13#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'divider' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'divider' (14#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/divider.v:1]
+INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:82]
+INFO: [Synth 8-6155] done synthesizing module 'display' (15#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/display.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (16#1) [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/top.v:3]
+WARNING: [Synth 8-3331] design control has unconnected port inst[31]
+WARNING: [Synth 8-3331] design control has unconnected port inst[29]
+WARNING: [Synth 8-3331] design control has unconnected port inst[28]
+WARNING: [Synth 8-3331] design control has unconnected port inst[27]
+WARNING: [Synth 8-3331] design control has unconnected port inst[26]
+WARNING: [Synth 8-3331] design control has unconnected port inst[25]
+WARNING: [Synth 8-3331] design control has unconnected port inst[24]
+WARNING: [Synth 8-3331] design control has unconnected port inst[23]
+WARNING: [Synth 8-3331] design control has unconnected port inst[22]
+WARNING: [Synth 8-3331] design control has unconnected port inst[21]
+WARNING: [Synth 8-3331] design control has unconnected port inst[20]
+WARNING: [Synth 8-3331] design control has unconnected port inst[19]
+WARNING: [Synth 8-3331] design control has unconnected port inst[18]
+WARNING: [Synth 8-3331] design control has unconnected port inst[17]
+WARNING: [Synth 8-3331] design control has unconnected port inst[16]
+WARNING: [Synth 8-3331] design control has unconnected port inst[15]
+WARNING: [Synth 8-3331] design control has unconnected port inst[11]
+WARNING: [Synth 8-3331] design control has unconnected port inst[10]
+WARNING: [Synth 8-3331] design control has unconnected port inst[9]
+WARNING: [Synth 8-3331] design control has unconnected port inst[8]
+WARNING: [Synth 8-3331] design control has unconnected port inst[7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 523.363 ; gain = 155.758
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[31] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[30] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[29] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[28] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[27] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[26] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[25] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[24] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[23] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[22] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[21] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[20] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[19] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[18] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[17] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[16] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[15] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[14] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[13] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[12] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[11] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[10] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[9] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[8] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[7] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[6] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[5] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[4] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[3] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[2] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[1] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:c[0] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[31] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[30] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[29] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[28] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[27] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[26] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[25] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[24] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[23] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[22] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[21] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[20] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[19] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[18] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[17] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[16] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[15] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[14] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[13] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[12] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[11] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[10] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[9] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[8] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[7] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[6] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[5] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[4] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[3] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[2] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[1] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_a_mux:d[0] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:86]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[31] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[30] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[29] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[28] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[27] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[26] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[25] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[24] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[23] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[22] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[21] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[20] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[19] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[18] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[17] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[16] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[15] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[14] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[13] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[12] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[11] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[10] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[9] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[8] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[7] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[6] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[5] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[4] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[3] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[2] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[1] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:c[0] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:d[31] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:d[30] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:d[29] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+WARNING: [Synth 8-3295] tying undriven pin alu_b_mux:d[28] to constant 0 [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/cpu.v:95]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 523.363 ; gain = 155.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 523.363 ; gain = 155.758
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/synthesized_ip/dram/dram/dram_in_context.xdc] for cell 'mini_rv_u/DM'
+Finished Parsing XDC File [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/synthesized_ip/dram/dram/dram_in_context.xdc] for cell 'mini_rv_u/DM'
+Parsing XDC File [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/synthesized_ip/prgrom/prgrom/prgrom_in_context.xdc] for cell 'mini_rv_u/IM'
+Finished Parsing XDC File [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/synthesized_ip/prgrom/prgrom/prgrom_in_context.xdc] for cell 'mini_rv_u/IM'
+Parsing XDC File [c:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc] for cell 'mini_rv_u/cpuclk'
+Finished Parsing XDC File [c:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc] for cell 'mini_rv_u/cpuclk'
+Parsing XDC File [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/constrs_1/new/pin.xdc]
+Finished Parsing XDC File [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/constrs_1/new/pin.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/constrs_1/new/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 886.305 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 886.305 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 886.305 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 886.305 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 886.305 ; gain = 518.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 886.305 ; gain = 518.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for mini_rv_u/cpuclk. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 886.305 ; gain = 518.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "regs_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.srcs/sources_1/new/alu.v:14]
+INFO: [Synth 8-5545] ROM "led" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "content" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 886.305 ; gain = 518.699
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 34    
+	               24 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 3     
+	  33 Input     32 Bit        Muxes := 2     
+	   8 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   5 Input     24 Bit        Muxes := 1     
+	   5 Input     17 Bit        Muxes := 1     
+	   9 Input     17 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 33    
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pc 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module npc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module rf 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	  33 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 32    
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+Module comp 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+Module iosel 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   5 Input     24 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input     17 Bit        Muxes := 1     
+	   9 Input     17 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+Module cpu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   8 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "content" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design control has unconnected port inst[31]
+WARNING: [Synth 8-3331] design control has unconnected port inst[29]
+WARNING: [Synth 8-3331] design control has unconnected port inst[28]
+WARNING: [Synth 8-3331] design control has unconnected port inst[27]
+WARNING: [Synth 8-3331] design control has unconnected port inst[26]
+WARNING: [Synth 8-3331] design control has unconnected port inst[25]
+WARNING: [Synth 8-3331] design control has unconnected port inst[24]
+WARNING: [Synth 8-3331] design control has unconnected port inst[23]
+WARNING: [Synth 8-3331] design control has unconnected port inst[22]
+WARNING: [Synth 8-3331] design control has unconnected port inst[21]
+WARNING: [Synth 8-3331] design control has unconnected port inst[20]
+WARNING: [Synth 8-3331] design control has unconnected port inst[19]
+WARNING: [Synth 8-3331] design control has unconnected port inst[18]
+WARNING: [Synth 8-3331] design control has unconnected port inst[17]
+WARNING: [Synth 8-3331] design control has unconnected port inst[16]
+WARNING: [Synth 8-3331] design control has unconnected port inst[15]
+WARNING: [Synth 8-3331] design control has unconnected port inst[11]
+WARNING: [Synth 8-3331] design control has unconnected port inst[10]
+WARNING: [Synth 8-3331] design control has unconnected port inst[9]
+WARNING: [Synth 8-3331] design control has unconnected port inst[8]
+WARNING: [Synth 8-3331] design control has unconnected port inst[7]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\dp/led_dp_reg )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 886.305 ; gain = 518.699
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'mini_rv_u/cpuclk/clk_out1' to pin 'mini_rv_u/cpuclk/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 886.305 ; gain = 518.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 886.305 ; gain = 518.699
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 937.809 ; gain = 570.203
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 937.809 ; gain = 570.203
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 937.809 ; gain = 570.203
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 937.809 ; gain = 570.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 937.809 ; gain = 570.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 937.809 ; gain = 570.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 937.809 ; gain = 570.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |cpuclk        |         1|
+|2     |prgrom        |         1|
+|3     |dram          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |cpuclk |     1|
+|2     |dram   |     1|
+|3     |prgrom |     1|
+|4     |BUFG   |     1|
+|5     |CARRY4 |    33|
+|6     |LUT1   |    23|
+|7     |LUT2   |    61|
+|8     |LUT3   |   178|
+|9     |LUT4   |   111|
+|10    |LUT5   |   178|
+|11    |LUT6   |   929|
+|12    |MUXF7  |   140|
+|13    |MUXF8  |    56|
+|14    |FDCE   |  1049|
+|15    |FDRE   |    83|
+|16    |IBUF   |    26|
+|17    |OBUF   |    40|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+--------+------+
+|      |Instance    |Module  |Cells |
++------+------------+--------+------+
+|1     |top         |        |  2974|
+|2     |  divider   |divider |    53|
+|3     |  dp        |display |    29|
+|4     |  mini_rv_u |cpu     |  2825|
+|5     |    NPC     |npc     |     8|
+|6     |    PC      |pc      |    70|
+|7     |    RF      |rf      |  2559|
+|8     |    alu     |alu     |    27|
+|9     |    comp    |comp    |    18|
+|10    |    iosel   |iosel   |    75|
++------+------------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 937.809 ; gain = 570.203
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 937.809 ; gain = 207.262
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 937.809 ; gain = 570.203
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 229 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'rf' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 944.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+88 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 944.938 ; gain = 588.813
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 944.938 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lenovo/Downloads/22_7_7_SingleCycle/SingleCycle/cpuIO/CPU_Project.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  8 10:18:17 2022...

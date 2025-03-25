@@ -1,0 +1,48 @@
+@startuml
+class edu.hitsz.aircraft.EliteEnemy
+class edu.hitsz.aircraft.BossEnemy
+class edu.hitsz.aircraft.HeroAircraft
+
+class edu.hitsz.strategy.HeroStraightStrategy {
++ List<BaseBullet> shoot(int,int,int,int,int,int)
+}
+interface edu.hitsz.strategy.Strategy {
+~ List<BaseBullet> shoot(int,int,int,int,int,int)
+}
+class edu.hitsz.strategy.EnemySprayStrategy {
++ List<BaseBullet> shoot(int,int,int,int,int,int)
+}
+class edu.hitsz.strategy.EnemyStraightStrategy {
++ List<BaseBullet> shoot(int,int,int,int,int,int)
+}
+class edu.hitsz.strategy.Context {
+- int locationX
+- int locationY
+- int direction
+- int aircraftSpeedY
+- int power
+- int shootNum
+- Strategy strategy
++ void updateStatus(int,int,int)
++ void setStrategy(Strategy)
++ List<BaseBullet> executeStrategy()
+}
+class edu.hitsz.strategy.HeroSprayStrategy {
++ List<BaseBullet> shoot(int,int,int,int,int,int)
+}
+
+
+edu.hitsz.strategy.Strategy <|.. edu.hitsz.strategy.HeroStraightStrategy
+edu.hitsz.strategy.Strategy <|.. edu.hitsz.strategy.EnemySprayStrategy
+edu.hitsz.strategy.Strategy <|.. edu.hitsz.strategy.EnemyStraightStrategy
+edu.hitsz.strategy.Strategy <|.. edu.hitsz.strategy.HeroSprayStrategy
+edu.hitsz.strategy.Context o--> edu.hitsz.strategy.Strategy
+edu.hitsz.aircraft.BossEnemy --> edu.hitsz.strategy.Context
+edu.hitsz.aircraft.EliteEnemy --> edu.hitsz.strategy.Context
+edu.hitsz.aircraft.HeroAircraft --> edu.hitsz.strategy.Context
+edu.hitsz.aircraft.BossEnemy ..> edu.hitsz.strategy.EnemySprayStrategy
+edu.hitsz.aircraft.EliteEnemy ..> edu.hitsz.strategy.EnemySprayStrategy
+edu.hitsz.aircraft.EliteEnemy ..> edu.hitsz.strategy.EnemyStraightStrategy
+edu.hitsz.aircraft.HeroAircraft ..> edu.hitsz.strategy.HeroStraightStrategy
+edu.hitsz.aircraft.HeroAircraft ..> edu.hitsz.strategy.HeroSprayStrategy
+@enduml

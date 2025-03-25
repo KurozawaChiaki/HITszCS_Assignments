@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.1 (64-bit)
+# SW Build 3557992 on Fri Jun  3 09:58:00 MDT 2022
+# IP Build 3556342 on Fri Jun  3 19:31:36 MDT 2022
+# Start of session at: Sat Jul  9 13:00:44 2022
+# Process ID: 20456
+# Current directory: E:/Documents/Code/SoC_Lab/SingleCycle/cpuIO/project_1/project_1.runs/prgrom_synth_1
+# Command line: vivado.exe -log prgrom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source prgrom.tcl
+# Log file: E:/Documents/Code/SoC_Lab/SingleCycle/cpuIO/project_1/project_1.runs/prgrom_synth_1/prgrom.vds
+# Journal file: E:/Documents/Code/SoC_Lab/SingleCycle/cpuIO/project_1/project_1.runs/prgrom_synth_1\vivado.jou
+# Running On: AliVe, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17010 MB
+#-----------------------------------------------------------
+source prgrom.tcl -notrace

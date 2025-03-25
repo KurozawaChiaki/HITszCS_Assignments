@@ -1,0 +1,85 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractFlyingObject
+{
+    # locationX:int
+    # locationY:int
+    # speedX:int
+    # speedY:int
+    # image:BufferedImage
+    # width:int
+    # height:int
+    # isValid:boolean
+
+    + AbstractFlyingObject(int locationX, int locationY, int speedX, int speedY)
+    + forward():void
+    + crash(AbstractFlyingObject flyingObject):boolean
+    + setLocation(double locationX, double locationY):void
+    + getLocationX():int
+    + getLocationY():int
+    + getSpeedY():int
+    + getImage():BufferedImage
+    + getWidth():int
+    + getHeight():int
+    + notValid():boolean
+    + vanish():void
+}
+
+AbstractFlyingObject <|-- AbstractItem
+
+abstract class AbstractItem {
+    + AbstractItem(int locationX, int locationY, int speedX, int speedY)
+    + {abstract} itemFunction():void
+}
+
+class BombSupplyItem {
+    + BombSupplyItem(int locationX, int locationY, int speedX, int speedY)
+    + itemFunction():void
+    + forward():void
+}
+
+class FireSupplyItem {
+    + FireSupplyItem(int locationX, int locationY, int speedX, int speedY)
+    + itemFunction():void
+    + forward():void
+}
+
+class HealingItem {
+    - int healHp
+    + HealingItem(int locationX, int locationY, int speedX, int speedY)
+    + itemFunction():void
+    + forward():void
+}
+
+AbstractItem <|-- HealingItem
+AbstractItem <|-- FireSupplyItem
+AbstractItem <|-- BombSupplyItem
+
+abstract class AbstractItemFactory {
+    + {abstract} createItem(int locationX, int locationY, int speedX, int speedY):AbstractItem
+}
+
+class HealingItemFactory {
+    + createItem(int locationX, int locationY, int speedX, int speedY):AbstractItem
+}
+
+class FireSupplyItemFactory {
+    + createItem(int locationX, int locationY, int speedX, int speedY):AbstractItem
+}
+
+class BombSupplyItemFactory {
+    + createItem(int locationX, int locationY, int speedX, int speedY):AbstractItem
+}
+
+AbstractItemFactory <|-- HealingItemFactory
+AbstractItemFactory <|-- FireSupplyItemFactory
+AbstractItemFactory <|-- BombSupplyItemFactory
+
+HealingItemFactory .> HealingItem
+FireSupplyItemFactory .> FireSupplyItem
+BombSupplyItemFactory .> BombSupplyItem
+
+
+
+@enduml
